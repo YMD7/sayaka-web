@@ -9,6 +9,8 @@
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="style.css" >
 <script type="text/javascript" src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.sayakaweb.js"></script>
 <script type="text/javascript">
     getTwitters('tweet', {
     id: 'sayaka_suzuki_',

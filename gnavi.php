@@ -4,6 +4,6 @@
         <li><a href="http://localhost/~kyo_YMD/SayakaSuzuki/profile.php">Profile</a></li>
         <li><a href="http://localhost/~kyo_YMD/SayakaSuzuki/#">Blog</a></li>
         <li><a href="http://localhost/~kyo_YMD/SayakaSuzuki/gallery.php">Gallery</a></li>
-        <li><a href="http://localhost/~kyo_YMD/SayakaSuzuki/#">Contact</a></li>
+        <li><a href="http://localhost/~kyo_YMD/SayakaSuzuki/contact.php">Contact</a></li>
       </ul>
     </div>

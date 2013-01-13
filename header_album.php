@@ -18,17 +18,8 @@
 <script type="text/javascript" src="../fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 <script type="text/javascript" src="../fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
 <script type="text/javascript" src="../fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="../js/jquery.sayakaweb.js"></script>
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('ul.tab_selector li').click(function() {
-      var num = $('ul.tab_selector li').index(this);
-      $('ul.tab_selector li.current').removeClass('current');
-      $(this).addClass('current');
-      $('div#gallery_area div').addClass('hidden');
-      $('div#gallery_area div').eq(num).removeClass('hidden');
-    });
-  });
-
   $(document).ready(function() {
     $(".fancybox").fancybox();
   });
@@ -61,6 +52,15 @@
       </a>
       
       <a href="http://twitter.com/#!/sayaka_suzuki_">
+        <div id="TW">
+          <img src="http://api.twitter.com/1/users/profile_image?screen_name=sayaka_suzuki_&size=bigger" alt="Twitter Icon" />
+          <div id="tweet"></div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+<!-- HEADER -->f="http://twitter.com/#!/sayaka_suzuki_">
         <div id="TW">
           <img src="http://api.twitter.com/1/users/profile_image?screen_name=sayaka_suzuki_&size=bigger" alt="Twitter Icon" />
           <div id="tweet"></div>

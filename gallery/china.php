@@ -1,7 +1,7 @@
 <?php include "../header_album.php" ?>
 
 <!-- MAIN -->
-  <div id="main">
+  <div id="main" class="album">
     
     <!-- GLOBAL NAVI -->
     <?php include "../gnavi.php" ?>
@@ -9,7 +9,18 @@
     <div id="right_column">
       <h2 class="large">Gallery</h2>
       <div class="gallery_content gallery_album">
-      <h3>中国 - China</h3>
+
+      <h3>Album</h3>
+      <ul class="gallery_subnavi">
+      	<a href="cambodia.php"><li>Cambodia</li></a>
+      	<a href="china.php"><li>China</li></a>
+      	<a href="india.php"><li>India</li></a>
+      	<a href="laos.php"><li>Laos</li></a>
+      	<a href="thai.php"><li>Thailand</li></a>
+      	<a href="vietnam.php"><li>Vietnam</li></a>
+      </ul>
+
+      <h3>中国 - <span>China</span></h3>
 
       <ul class="tab_selector">
         <li class="current">2008.11</li>
