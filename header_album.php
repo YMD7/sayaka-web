@@ -1,3 +1,4 @@
+<?php $domain = "http://localhost/~kyo_YMD/SayakaSuzuki/"; ?>
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
@@ -52,15 +53,6 @@
       </a>
       
       <a href="http://twitter.com/#!/sayaka_suzuki_">
-        <div id="TW">
-          <img src="http://api.twitter.com/1/users/profile_image?screen_name=sayaka_suzuki_&size=bigger" alt="Twitter Icon" />
-          <div id="tweet"></div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-<!-- HEADER -->f="http://twitter.com/#!/sayaka_suzuki_">
         <div id="TW">
           <img src="http://api.twitter.com/1/users/profile_image?screen_name=sayaka_suzuki_&size=bigger" alt="Twitter Icon" />
           <div id="tweet"></div>
