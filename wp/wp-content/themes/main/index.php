@@ -14,15 +14,25 @@
         <ul>
         <!-- start WP LOOP -->
         <?php
-        query_posts( 'posts_per_page=2&cat=6' );
+        query_posts( 'posts_per_page=2&cat=3' );
         if ( have_posts() ) :
 
           while ( have_posts() ) : the_post() ; ?>
 
             <li>
+              <p class="date"><?php echo get_the_date( $d ); ?></p>
               <a href="<?php echo get_permalink() ?>">
-                <p class="date"><?php echo get_the_date( $d ); ?> posted</p>
                 <p class="title"><?php the_title(); ?></p>
+              </a>
+              <span class="category">
+                <?php $categories = get_the_category(); $categories = $categories[0];
+                  $cat_id = $categories -> cat_ID;
+                  $cat_name = $categories -> cat_name;
+                  $cat_url = get_category_link( $cat_id ); {
+                    echo 'Category: <a href="' . $cat_url . '">' . $cat_name . '</a>';
+                  }
+                ?>
+              </span>
                 <div class="box">
                   <div class="article_excerpt_img">
                     <img src="<?php echo catch_that_image(); ?>" />
@@ -30,9 +40,12 @@
                   <div class="article_text">
                     <?php the_excerpt(); ?>
                   </div>
-                  <div class="continue_read">続きを読む</div>
+                  <div class="continue_read">
+                    <a href="<?php echo get_permalink() ?>">
+                      続きを読む
+                    </a>
+                  </div>
                 </div>
-              </a>
             </li>
 
           <?php endwhile;
@@ -49,7 +62,7 @@
         </ul>
 
         <div class="read_more">
-          <?php $cat_event_link_url = get_category_link( 6 ); {
+          <?php $cat_event_link_url = get_category_link( 3 ); {
             echo '<a href="' . $cat_event_link_url . '">過去のイベントスケジュールをみる</a>';
           } ?>
         </div>
@@ -63,16 +76,25 @@
         <ul>
         <!-- start WP LOOP -->
         <?php
-        query_posts( 'posts_per_page=3&cat=-6' );
+        query_posts( 'posts_per_page=3&cat=-3' );
         if ( have_posts() ) :
 
           while ( have_posts() ) : the_post() ; ?>
 
             <li>
               <a href="<?php echo get_permalink() ?>">
-                <p class="date"><?php echo get_the_date( $d ); ?> posted</p>
+                <p class="date"><?php echo get_the_date( $d ); ?></p>
                 <p class="title"><?php the_title(); ?></p>
               </a>
+              <span class="category">
+                <?php $categories = get_the_category(); $categories = $categories[0];
+                  $cat_id = $categories -> cat_ID;
+                  $cat_name = $categories -> cat_name;
+                  $cat_url = get_category_link( $cat_id ); {
+                    echo 'Category: <a href="' . $cat_url . '">' . $cat_name . '</a>';
+                  }
+                ?>
+              </span>
               <div class="box">
                 <div class="article_text">
                   <?php the_content(); ?>
