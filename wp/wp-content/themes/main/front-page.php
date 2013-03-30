@@ -9,7 +9,7 @@
     <div id="right_column" class="index">
 
       <div class="post_feed event_schedule">
-        <h2 class="small">Event Schedule</h2>
+        <h2 class="small">Event Information</h2>
 
         <ul>
         <!-- start WP LOOP -->
@@ -22,7 +22,7 @@
             <li>
               <p class="date"><?php echo get_the_date( $d ); ?></p>
               <a href="<?php echo get_permalink() ?>">
-                <h3 class="title"><?php the_title(); ?></h3>
+                <h3 class="article_title"><?php the_title(); ?></h3>
               </a>
               <span class="category">
                 <?php $categories = get_the_category(); $categories = $categories[0];
@@ -35,7 +35,9 @@
               </span>
                 <div class="box">
                   <div class="article_excerpt_img">
-                    <img src="<?php echo catch_that_image(); ?>" />
+                    <a href="<?php echo get_permalink() ?>">
+                      <img src="<?php echo catch_that_image(); ?>" />
+                    </a>
                   </div>
                   <div class="article_text">
                     <?php the_excerpt(); ?>
@@ -71,7 +73,7 @@
 
 
       <div class="post_feed blog_post">
-        <h2 class="small">Blog Post</h2>
+        <h2 class="small">最近の投稿</h2>
 
         <ul>
         <!-- start WP LOOP -->
@@ -84,7 +86,7 @@
             <li>
               <a href="<?php echo get_permalink() ?>">
                 <p class="date"><?php echo get_the_date( $d ); ?></p>
-                <p class="title"><?php the_title(); ?></p>
+                <h3 class="article_title"><?php the_title(); ?></h3>
               </a>
               <span class="category">
                 <?php $categories = get_the_category(); $categories = $categories[0];
@@ -101,6 +103,7 @@
                 </div>
               </div>
               <div class="go_top"><a href="#">トップにもどる</a></div>
+
             </li>
 
           <?php endwhile;
@@ -116,8 +119,10 @@
 
         </ul>
 
-        <div class="page_navi">
-          <?php wp_pagenavi(); ?>
+        <div class="read_more">
+          <a href="<?php bloginfo('url'); ?>/blog">
+            もっとブログを読む
+      　　</a>
         </div>
 
       </div>

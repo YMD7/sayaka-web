@@ -1,4 +1,10 @@
-<?php include "header.php" ?>
+<?php
+/*
+Template Name: Blog Top
+*/
+?>
+
+<?php include 'header.php'; ?>
 
 <!-- MAIN -->
   <div id="main" class="blog">
@@ -10,8 +16,8 @@
       <h2 class="midium">Blog</h2>
 
       <!-- start WP LOOP -->
-      <?php global $query_string;
-      query_posts( $query_string . '&posts_per_page=3' ); ?>
+      <?php $paged = get_query_var('paged');
+      query_posts( "posts_per_page=3&paged=$paged" ); ?>
 
       <?php if ( have_posts() ) :
 

@@ -7,30 +7,32 @@
     <?php include "gnavi.php" ?>
 
     <div id="left_column">
-      <h2 class="large">Blog</h2>
+      <h2 class="midium">Blog</h2>
 
       <!-- start WP LOOP -->
       <?php $categories = get_the_category(); $cat = $categories[0];
+        global $query_string;
         $cat_id = $cat -> cat_ID;
-        query_posts( 'posts_per_page=4&cat=' . $cat_id );
+        query_posts( $query_string . '&posts_per_page=3' );
 
       if ( have_posts() ) :
 
         while ( have_posts() ) : the_post() ; ?>
 
           <div class="article">
-            <div class="article_header">
-              <span class="date"><?php echo get_the_date( $d ); ?></span>
-              <h3><a href="<?php echo get_permalink(); ?>" ><?php the_title(); ?></a></h3>
-              <span class="category">
-                <?php
-                  $cat_name = $cat -> cat_name;
-                  $cat_url = get_category_link( $cat_id ); {
-                    echo 'Category: <a href="' . $cat_url . '">' . $cat_name . '</a>';
-                  }
-                ?>
-              </span>
-            </div>
+            <p class="date"><?php echo get_the_date( $d ); ?></p>
+            <a href="<?php echo get_permalink() ?>">
+              <h3 class="article_title"><?php the_title(); ?></h3>
+            </a>
+            <span class="category">
+              <?php $categories = get_the_category(); $categories = $categories[0];
+                $cat_id = $categories -> cat_ID;
+                $cat_name = $categories -> cat_name;
+                $cat_url = get_category_link( $cat_id ); {
+                  echo 'Category: <a href="' . $cat_url . '">' . $cat_name . '</a>';
+                }
+              ?>
+            </span>
             <div class="article_content">
               <div class="article_text">
                 <?php the_content(); ?>

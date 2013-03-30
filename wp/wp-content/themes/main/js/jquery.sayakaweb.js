@@ -74,4 +74,9 @@ $(function() {
 
   });
 
+  // ====== add class "fancybox" to images on blog ======
+  $(function() {
+    $('div.article_text a').addClass('fancybox');
+  });
+
 });
