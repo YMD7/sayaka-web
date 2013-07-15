@@ -85,8 +85,11 @@ body div#content{
 	min-height: 100%;
 	margin:0 auto;
 }
-.hide{
-	display:none;
+.no-display{
+	display: none;
+}
+.hidden {
+	visibility: hidden;
 }
 
 /*===================================================================
@@ -149,8 +152,8 @@ div#name:hover{
 }
 div#TW{
 	float:right;
-    background: -moz-linear-gradient(top, #ededed, #fdfdfd);
-    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fdfdfd));
+    /*background: -moz-linear-gradient(top, #ededed, #fdfdfd);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fdfdfd));*/
 	border-top:1px solid #CCC;
 	border-bottom:1px solid #CCC;
 	width:609px;
@@ -162,10 +165,10 @@ div#TW img{
 	border:2px solid #333;
 	margin-top:4px;
 }
-div#TW:hover{
+/*div#TW:hover{
 	border-bottom:4px solid #666;
 	padding:11px 6px 22px 55px;
-}
+}*/
 div#tweet{
 	position:relative;
 	float:right;

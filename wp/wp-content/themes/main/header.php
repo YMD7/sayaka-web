@@ -2,6 +2,12 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta property="og:title" content="Sayaka Suzuki :: Sunny Smile ＾＾"/>
+<meta property="og:type" content="Blog"/>
+<meta property="og:url" content="http://smile-photo.net/"/>
+<meta property="og:image" content="http://smile-photo.net/wp-content/themes/main/images/profile_smile_img.JPG"/>
+<meta property="og:site_name" content="Sayaka Suzuki - 笑顔写真家 Smile Photographer"/>
+<meta property="og:description" content="笑顔写真家 鈴木さやかのWebサイトです。アジアを旅して撮ってきた写真作品集などの紹介(写真販売)やブログを運営しています。"/>
 
 
   <title><?php bloginfo( 'name' ); ?></title>
@@ -76,12 +82,14 @@
         </div>
       </a>
       
-      <a href="http://twitter.com/#!/sayaka_suzuki_">
+      <!--<a href="http://twitter.com/#!/sayaka_suzuki_">-->
         <div id="TW">
-          <img src="http://api.twitter.com/1/users/profile_image?screen_name=sayaka_suzuki_&size=bigger" alt="Twitter Icon" />
-          <div id="tweet"></div>
+          <img class="hidden" src="http://www.paper-glasses.com/api/twipi/sayaka_suzuki_/bigger" width="73" height="73" alt="Twitter Icon" />
+          <!-- Shows icon with //Profile Image API For Twitter | http://140note.hitonobetsu.com/apipage/profileimage//.
+               Thank you so much!! -->
+          <div id="tweet" class="hidden"></div>
         </div>
-      </a>
+      <!--</a>-->
     </div>
 
   </div>
