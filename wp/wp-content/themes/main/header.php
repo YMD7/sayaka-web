@@ -19,7 +19,6 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <?php /* wordpress header */ wp_head(); ?>
-<script type="text/javascript" src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/fancybox/jquery.fancybox.pack.js?v=2.1.3"></script>
@@ -27,21 +26,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.sayakaweb.js"></script>
-<script type="text/javascript">
-    getTwitters('tweet', {
-    id: 'sayaka_suzuki_',
-    count: 5,
-    enableLinks: true,
-    ignoreReplies: true,
-    clearContents: true,
-    template: '<em>%time%</em><br />%text%'
-    });
-
-    // ====== close address bar ======
-    window.onload = function(){
-       setTimeout("scrollTo(0,1)", 100);
-    }
-</script>
 
 </head>
 <body>
@@ -82,14 +66,9 @@
         </div>
       </a>
       
-      <!--<a href="http://twitter.com/#!/sayaka_suzuki_">-->
-        <div id="TW">
-          <img class="hidden" src="http://www.paper-glasses.com/api/twipi/sayaka_suzuki_/bigger" width="73" height="73" alt="Twitter Icon" />
-          <!-- Shows icon with //Profile Image API For Twitter | http://140note.hitonobetsu.com/apipage/profileimage//.
-               Thank you so much!! -->
-          <div id="tweet" class="hidden"></div>
-        </div>
-      <!--</a>-->
+      <!-- Tweet部分を表示 -->
+      <?php include "tweet.php" ?>
+      
     </div>
 
   </div>
